@@ -1,0 +1,47 @@
+author=Firmin Martin
+title=SageMath notes
+debug=debug
+columns=2
+
+cc:Arithmetic operation
+Python-like arithmetic operations & `^`, `**`, `sqrt`, `//`, `%`, `divmod(a,b)`, `factorial(n)`, `binomial(n, k)`, _etc._
+Symbolic computation              & $20/14$ give $10/7$
+Numerical appoximation            & `numerical_approx($20/14$)` $= 1.42857$
+
+cc:Constants
+boolean values "true" and "false"      & `True`, `False`
+imaginary unit $i$                     & `I` or `i`
+infinity $\infty$                      & `Infinity` or `oo`
+Archimedes' constant $\pi$             & `pi`
+logarithm basis $e = \exp(1)$          & `e`
+Euler-Mascheroni constant  $\gamma$    & `euler_gamma`
+golden ratio $\phi = (1 + \sqrt{5})/2$ & `golden_ratio`
+Catalan's constant                     & `catalan`
+
+cc:Python variables
+Last three results                   & stored in `_`, `__` and `___` variables.
+Restore predefined var default value & `restore()`
+Restore all var default value        & `reset()`
+
+cc:Symbolic variable
+Declaration       & `x = SR.var('x')`
+Create a lot vars & `SR.var('x', 100)`
+Shortcuts         & `var('x')`
+                  & `var('a, b, c, d')`
+
+cc:Subsitution
+> `a, x = var('a, x'); y = cos(x+a) * (x+1); y`
+Substitution of symbolic var & `y.subs(a=-x)`
+Parallel substitution        & `y.subs(x=pi/2, a=pi/3)`
+Numerical substitution       & `y.subs(x=0.5, a=2.3)`
+Shortcuts                    & `y(a=-x)`
+                             & `y(x=pi/2, a=pi/3)`
+                             & `y(x=0.5, a=2.3)`
+Complex substitution         & `f = x^3 + y^2 + z; f.@c[red](substitute)(x^3 == y^2, z==1)`
+
+cc:Function
+
+
+sage:calc
+200 * (1.1 ^ 56)
+200 * (1.02 ^ 365)
